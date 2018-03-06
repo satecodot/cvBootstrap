@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="jquery-3.3.1.min.js"></script>
+    <title>Welcome Dude</title>
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P|Dosis" rel="stylesheet">
+    <style>
+    body {background-color: black}
+    .random_word1 {
+        list-style: none;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .random_word1 li {
+        display: inline-block;
+        color: white;
+        font-family: Dosis;
+        font-size: 5cm;
+        opacity: 1;
+        transition: all 2.5s ease
+    }
+    .random_word1 li :last-child {
+        margin-right: 0;
+    }
+    .random_word1.hidden li {
+        opacity: 0;
+    }
+    .random_word1.hidden li:nth-child(1) {transform:translateX(-200px) translateY(-200px) }
+    .random_word1.hidden li:nth-child(2) {transform:translateX(20px) translateY(-100px) }
+    .random_word1.hidden li:nth-child(3) {transform:translateX(-150px) translateY(-80px) }
+    .random_word1.hidden li:nth-child(4) {transform:translateX(10px) translateY(-200px) }
+    .random_word1.hidden li:nth-child(5) {transform:translateX(-300px) translateY(200px) }
+    </style>
+</head>
+<body>
+   <ul class="random_word1 hidden">
+    <li><a href="index.html">H</a></li>
+    <li>E</li>
+    <li>L</li>
+    <li>L</li>
+    <li>O</li>
+    </ul>
+<script>
+    $(function(){
+        setTimeout(function(){
+$('.random_word1').removeClass('hidden')
+        }, 500)
+    })
+</script>
+</body>
+</html>
